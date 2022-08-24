@@ -9,13 +9,11 @@ import { Article } from './article.model';
 
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass='row';
-  @Input() article: Article;
+  @Input()
+  article!: Article;
 
   constructor() { 
-    this.article = new Article(
-      'Angular',
-      'http://angular.io',
-      10);
+        
   }
 
   voteUp(): boolean {

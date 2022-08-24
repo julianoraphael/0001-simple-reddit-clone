@@ -1,7 +1,7 @@
 export class Article {
-  title: string;
-  link: string;
-  votes: number;
+  title!: string;
+  link!: string;
+  votes!: number;
 
   constructor(title: string, link: string, votes?: number) {
     this.title = title;
@@ -26,7 +26,7 @@ export class Article {
       // e.g. foo.com/path/to/bar
       return domainAndPath.split('/')[0];
     } catch (err) {
-      return 'null';
+      return "";
     }
   }
 }
